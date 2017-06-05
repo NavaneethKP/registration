@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">register</string>
+    <string name="register">Register!</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_phone">Phone</string>
+    <string name="hint_mail">Email</string>
+    <string name="hint_college">School/College</string>
+    <string name="button">CONFIRM REGISTER</string>
+</resources>
