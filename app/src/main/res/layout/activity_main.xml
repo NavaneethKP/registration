@@ -25,34 +25,34 @@
         android:id="@+id/person"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="49dp"
         app:srcCompat="@drawable/ic_action_person"
-        android:layout_below="@+id/register"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:layout_marginLeft="38dp"
-        android:layout_marginStart="38dp" />
+        android:layout_marginStart="38dp"
+        android:layout_alignTop="@+id/name_input"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/person"
-        android:layout_alignLeft="@+id/person"
-        android:layout_alignStart="@+id/person"
-        android:layout_marginLeft="33dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginRight="20dp"
         android:hint="@string/hint_name"
+        app:errorEnabled="true"
         android:textColorHint="@color/colorAccent"
         android:id="@+id/name_input"
-        android:onClick="name_clicked">
+        android:onClick="name_clicked"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_below="@+id/register"
+        android:layout_toRightOf="@+id/person"
+        android:layout_toEndOf="@+id/person">
 
         <EditText
             android:id="@+id/name_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorAccent"
             android:inputType="textCapSentences"
+            android:backgroundTint="@color/colorAccent"
             android:textColor="@color/colorAccent"
             android:textColorHint="@color/colorAccent" />
     </android.support.design.widget.TextInputLayout>
@@ -61,31 +61,30 @@
         android:id="@+id/phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="61dp"
         app:srcCompat="@drawable/ic_action_phone"
-        android:layout_below="@+id/person"
+        android:layout_below="@+id/name_input"
         android:layout_alignLeft="@+id/person"
-        android:layout_alignStart="@+id/person" />
+        android:layout_alignStart="@+id/person"
+        android:layout_marginTop="24dp" />
 
     <android.support.design.widget.TextInputLayout
+        android:id="@+id/phone_input"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/phone"
-        android:layout_alignLeft="@+id/phone"
-        android:layout_alignStart="@+id/phone"
-        android:layout_marginLeft="33dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginRight="20dp"
         android:textColorHint="@color/colorAccent"
-        android:id="@+id/phone_input">
+        app:errorEnabled="true"
+        android:layout_alignTop="@+id/phone"
+        android:layout_alignLeft="@+id/name_input"
+        android:layout_alignStart="@+id/name_input"
+        android:hint="@string/hint_phone"
+        >
 
         <EditText
             android:id="@+id/phone_text"
-            android:inputType="phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@android:color/background_light"
-            android:hint="@string/hint_phone"
+            android:inputType="phone"
             android:textColor="@color/colorAccent" />
     </android.support.design.widget.TextInputLayout>
 
@@ -93,24 +92,22 @@
         android:id="@+id/mail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="61dp"
         app:srcCompat="@drawable/ic_action_mail"
-        android:layout_below="@+id/phone"
+        android:layout_alignTop="@+id/mail_input"
         android:layout_alignLeft="@+id/phone"
         android:layout_alignStart="@+id/phone" />
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/mail"
-        android:layout_alignLeft="@+id/mail"
-        android:layout_alignStart="@+id/mail"
-        android:layout_marginLeft="33dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginRight="20dp"
         android:hint="@string/hint_mail"
+        app:errorEnabled="true"
         android:textColorHint="@color/colorAccent"
-        android:id="@+id/mail_input">
+        android:id="@+id/mail_input"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/phone_input"
+        android:layout_alignLeft="@+id/college_input"
+        android:layout_alignStart="@+id/college_input">
 
         <EditText
             android:id="@+id/mail_text"
@@ -125,25 +122,24 @@
         android:id="@+id/college"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/mail"
-        android:layout_alignRight="@+id/mail"
-        android:layout_below="@+id/mail"
-        android:layout_marginTop="61dp"
-        app:srcCompat="@drawable/ic_action_school" />
+        app:srcCompat="@drawable/ic_action_school"
+        android:layout_alignTop="@+id/college_input"
+        android:layout_alignLeft="@+id/mail"
+        android:layout_alignStart="@+id/mail" />
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/college"
-        android:layout_alignLeft="@+id/college"
-        android:layout_alignStart="@+id/college"
-        android:layout_marginLeft="33dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginRight="20dp"
         android:hint="@string/hint_college"
         android:textColorHint="@color/colorAccent"
         android:id="@+id/college_input"
-        >
+        app:errorEnabled="true"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/mail_input"
+        android:layout_toRightOf="@+id/college"
+        android:layout_toEndOf="@+id/college"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp">
 
         <EditText
             android:id="@+id/college_text"
@@ -159,14 +155,12 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/college_input"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="43dp"
         android:background="@color/button"
         android:padding="5dp"
         android:text="@string/button"
 
-        />
+        android:layout_below="@+id/college_input"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
